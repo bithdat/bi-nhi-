@@ -1,4 +1,9 @@
-import { getGeminiClient, GEMINI_MODEL, extractJson, setCorsHeaders } from './_gemini.js';
+import {
+  getGeminiClient,
+  generateJsonWithFallback,
+  formatGeminiError,
+  setCorsHeaders,
+} from './_gemini.js';
 
 export default async function handler(req, res) {
   setCorsHeaders(res);
@@ -45,22 +50,14 @@ Trả về CHỈ JSON thuần theo đúng cấu trúc:
   "grammar_tip": "1 mẹo ngữ pháp HSK 3.0 ngắn gọn rút ra từ câu này"
 }`;
 
-    const response = await ai.models.generateContent({
-      model: GEMINI_MODEL,
-      contents: prompt,
-      config: {
-        responseMimeType: 'application/json',
-        temperature: 0.3,
-      },
-    });
-
-    const parsed = extractJson(response.text);
-    return res.status(200).json(parsed);
+    const { data, model } = await generateJsonWithFallback(req, ai, prompt, { temperature: 0.3 });
+    return res.status(200).json({ ...data, _model: model });
   } catch (err) {
     console.error('[api/grade]', err);
-    return res.status(err.statusCode || 500).json({
-      error: err.message || 'Lỗi khi chấm câu với AI.',
-      code: err.code || 'AI_ERROR',
+    const formatted = formatGeminiError(err);
+    return res.status(formatted.statusCode).json({
+      error: formatted.message,
+      code: formatted.code,
     });
   }
 }
