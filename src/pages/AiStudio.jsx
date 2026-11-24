@@ -45,7 +45,15 @@ export function AiStudio({ onNavigate }) {
   const [transLoading, setTransLoading] = useState(false);
   const [transResult, setTransResult] = useState(null);
   const [savedVocabSet, setSavedVocabSet] = useState(new Set());
-  const [aiError, setAiError] = useState('');
+  const [aiError, setAiError] = useState(null);
+  const [activeModel, setActiveModel] = useState('gemini-3.8-flash');
+
+  const handleAiErr = (err) => {
+    setAiError({
+      message: err?.message || 'Lỗi khi kết nối trợ lý AI.',
+      code: err?.code || 'AI_ERROR',
+    });
+  };
 
   // --- Mode 2: Sentence Grader ---
   const [targetWords, setTargetWords] = useState([]);
@@ -86,7 +94,7 @@ export function AiStudio({ onNavigate }) {
     setTargetWords(picked);
     setUserSentence('');
     setGradeResult(null);
-    setAiError('');
+    setAiError(null);
   };
 
   useEffect(() => {
@@ -95,7 +103,7 @@ export function AiStudio({ onNavigate }) {
 
   // --- Handlers: Translation ---
   const handleGeneratePassage = async () => {
-    setAiError('');
+    setAiError(null);
     setTransLoading(true);
     setTransResult(null);
     try {
@@ -104,12 +112,13 @@ export function AiStudio({ onNavigate }) {
         { action: 'generate', direction, level: aiLevel, topic },
         personalApiKey
       );
+      if (res._model) setActiveModel(res._model);
       setSourceText(res.source_text || '');
       setSourcePinyin(res.source_pinyin || '');
       setSourceHint(res.hint || '');
       setUserTranslation('');
     } catch (err) {
-      setAiError(err.message);
+      handleAiErr(err);
     } finally {
       setTransLoading(false);
     }
@@ -120,7 +129,7 @@ export function AiStudio({ onNavigate }) {
       showToast('Vui lòng nhập đầy đủ văn bản gốc và bản dịch của bạn.', 'warning');
       return;
     }
-    setAiError('');
+    setAiError(null);
     setTransLoading(true);
     try {
       const res = await callAiEndpoint(
@@ -135,6 +144,7 @@ export function AiStudio({ onNavigate }) {
         },
         personalApiKey
       );
+      if (res._model) setActiveModel(res._model);
       setTransResult(res);
       recordStudyActivity();
       await db.translationLogs.add({
@@ -148,7 +158,7 @@ export function AiStudio({ onNavigate }) {
         createdAt: Date.now(),
       });
     } catch (err) {
-      setAiError(err.message);
+      handleAiErr(err);
     } finally {
       setTransLoading(false);
     }
@@ -175,7 +185,7 @@ export function AiStudio({ onNavigate }) {
       showToast('Hãy nhập câu tiếng Trung bạn đặt nhé.', 'warning');
       return;
     }
-    setAiError('');
+    setAiError(null);
     setGradeLoading(true);
     try {
       const res = await callAiEndpoint(
@@ -183,6 +193,7 @@ export function AiStudio({ onNavigate }) {
         { targetWords, userSentence, level: aiLevel },
         personalApiKey
       );
+      if (res._model) setActiveModel(res._model);
       setGradeResult(res);
       recordStudyActivity();
       await db.translationLogs.add({
@@ -196,7 +207,7 @@ export function AiStudio({ onNavigate }) {
         createdAt: Date.now(),
       });
     } catch (err) {
-      setAiError(err.message);
+      handleAiErr(err);
     } finally {
       setGradeLoading(false);
     }
@@ -206,7 +217,7 @@ export function AiStudio({ onNavigate }) {
   const startRoleplaySession = async (sc = scenario) => {
     setScenario(sc);
     setMessages([]);
-    setAiError('');
+    setAiError(null);
     setChatLoading(true);
     try {
       const res = await callAiEndpoint(
@@ -219,6 +230,7 @@ export function AiStudio({ onNavigate }) {
         },
         personalApiKey
       );
+      if (res._model) setActiveModel(res._model);
       const aiMsg = {
         id: Date.now(),
         role: 'ai',
@@ -232,7 +244,7 @@ export function AiStudio({ onNavigate }) {
       setMessages([aiMsg]);
       speakChinese(res.reply_zh, speechRate);
     } catch (err) {
-      setAiError(err.message);
+      handleAiErr(err);
     } finally {
       setChatLoading(false);
     }
@@ -246,7 +258,7 @@ export function AiStudio({ onNavigate }) {
     const nextHistory = [...messages, userMsg];
     setMessages(nextHistory);
     setChatInput('');
-    setAiError('');
+    setAiError(null);
     setChatLoading(true);
 
     try {
@@ -262,6 +274,7 @@ export function AiStudio({ onNavigate }) {
         },
         personalApiKey
       );
+      if (res._model) setActiveModel(res._model);
       const aiMsg = {
         id: Date.now() + 1,
         role: 'ai',
@@ -277,7 +290,7 @@ export function AiStudio({ onNavigate }) {
       recordStudyActivity();
       speakChinese(res.reply_zh, speechRate);
     } catch (err) {
-      setAiError(err.message);
+      handleAiErr(err);
     } finally {
       setChatLoading(false);
     }
@@ -310,7 +323,7 @@ export function AiStudio({ onNavigate }) {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wider text-[#C2410C]">
-            Trợ lý AI • Gemini 2.5 Flash
+            Trợ lý AI • {activeModel} (tự động dự phòng khi quá tải)
           </p>
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#1E293B] mt-1">
             Luyện Dịch, Đặt Câu &amp; Giao Tiếp
@@ -345,7 +358,7 @@ export function AiStudio({ onNavigate }) {
                   type="button"
                   onClick={() => {
                     setMode(m.id);
-                    setAiError('');
+                    setAiError(null);
                   }}
                   className={`inline-flex items-center gap-1.5 px-3 min-h-[36px] rounded-lg text-xs font-semibold cursor-pointer transition-colors ${
                     mode === m.id ? 'bg-[#0F766E] text-white' : 'text-slate-600 hover:text-[#1E293B]'
@@ -365,15 +378,25 @@ export function AiStudio({ onNavigate }) {
         <div className="rounded-2xl bg-[#FFF7ED] border border-[#C2410C]/30 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs sm:text-sm text-[#9A3412]">
           <div className="flex items-start gap-2.5">
             <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-[#C2410C]" />
-            <span>{aiError}</span>
+            <span>{aiError.message}</span>
           </div>
-          <button
-            type="button"
-            onClick={() => onNavigate('settings')}
-            className="btn-tactile shrink-0 px-3.5 py-2 rounded-xl bg-white border border-[#C2410C]/30 text-xs font-semibold text-[#C2410C] cursor-pointer"
-          >
-            Nhập Gemini API Key →
-          </button>
+          {aiError.code === 'MISSING_API_KEY' || aiError.code === 'INVALID_API_KEY' ? (
+            <button
+              type="button"
+              onClick={() => onNavigate('settings')}
+              className="btn-tactile shrink-0 px-3.5 py-2 rounded-xl bg-white border border-[#C2410C]/30 text-xs font-semibold text-[#C2410C] cursor-pointer"
+            >
+              Kiểm tra Gemini API Key →
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setAiError(null)}
+              className="btn-tactile shrink-0 px-3.5 py-2 rounded-xl bg-white border border-[#C2410C]/30 text-xs font-semibold text-[#C2410C] cursor-pointer"
+            >
+              Đóng thông báo
+            </button>
+          )}
         </div>
       )}
 
