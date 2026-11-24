@@ -1,0 +1,659 @@
+[
+  {
+    "id": "exam-hsk1-01",
+    "level": "HSK1",
+    "title": "Đề Thi Mô Phỏng HSK 1 (Chuẩn HSK 3.0) — Đề số 01",
+    "description": "Gồm 2 phần thi chuẩn iBT: Nghe hiểu (100đ) và Đọc hiểu (100đ). Điểm đạt: 120/200.",
+    "passingScore": 120,
+    "maxScore": 200,
+    "sections": [
+      {
+        "id": "listening",
+        "title": "Phần 1: Nghe hiểu (听力)",
+        "durationSec": 480,
+        "maxScore": 100,
+        "maxReplays": 2,
+        "instructions": "Nghe đoạn ghi âm tiếng Trung (tối đa 2 lần/câu) và chọn đáp án đúng nhất.",
+        "questions": [
+          {
+            "id": "h1-l1",
+            "type": "mcq",
+            "audioText": "你好！请问你是王老师吗？不是，我姓李，我是李医生。",
+            "prompt": "Người nói chuyện không phải là ai?",
+            "options": ["Thầy giáo Vương (王老师)", "Bác sĩ Lý (李医生)", "Học sinh Lý (李学生)", "Bác sĩ Vương (王医生)"],
+            "answer": 0,
+            "explanation": "Trong đoạn nghe: '不是，我姓李，我是李医生' (Không phải, tôi họ Lý, tôi là bác sĩ Lý) -> không phải Thầy giáo Vương."
+          },
+          {
+            "id": "h1-l2",
+            "type": "mcq",
+            "audioText": "今天是星期三，明天我们一起去公园看花吧。",
+            "prompt": "Họ dự định đi công viên vào thứ mấy?",
+            "options": ["Thứ Ba (星期二)", "Thứ Tư (星期三)", "Thứ Năm (星期四)", "Thứ Sáu (星期五)"],
+            "answer": 2,
+            "explanation": "'今天是星期三' (Hôm nay là thứ Tư), '明天' (ngày mai) tức là Thứ Năm (星期四)."
+          },
+          {
+            "id": "h1-l3",
+            "type": "mcq",
+            "audioText": "这个苹果三块钱一斤，那个西瓜十块钱一个。我要两斤苹果。",
+            "prompt": "Người mua cần trả bao nhiêu tiền?",
+            "options": ["3 tệ (三块)", "6 tệ (六块)", "10 tệ (十块)", "13 tệ (十三块)"],
+            "answer": 1,
+            "explanation": "Táo giá 3 tệ/cân (三块钱一斤), mua 2 cân (两斤苹果) => 3 × 2 = 6 tệ."
+          },
+          {
+            "id": "h1-l4",
+            "type": "mcq",
+            "audioText": "我每天早上七点起床，七点半吃早饭，八点去学校。",
+            "prompt": "Người nói ăn sáng lúc mấy giờ?",
+            "options": ["7:00", "7:30", "8:00", "8:30"],
+            "answer": 1,
+            "explanation": "'七点半吃早饭' nghĩa là 7 giờ 30 phút ăn sáng."
+          },
+          {
+            "id": "h1-l5",
+            "type": "mcq",
+            "audioText": "外面下雨了，天气很冷，你多穿点儿衣服吧。",
+            "prompt": "Thời tiết bên ngoài hiện tại thế nào?",
+            "options": ["Trời nắng và nóng", "Trời mưa và lạnh", "Trời nhiều mây và ấm", "Trời có tuyết rơi"],
+            "answer": 1,
+            "explanation": "'外面下雨了，天气很冷' nghĩa là bên ngoài trời đang mưa, thời tiết rất lạnh."
+          },
+          {
+            "id": "h1-l6",
+            "type": "mcq",
+            "audioText": "请问，火车站离这里远吗？不远，坐公共汽车十分钟就到了。",
+            "prompt": "Đi xe buýt đến ga tàu hỏa mất bao lâu?",
+            "options": ["5 phút", "10 phút", "15 phút", "20 phút"],
+            "answer": 1,
+            "explanation": "'坐公共汽车十分钟就到了' — đi xe buýt 10 phút là tới."
+          }
+        ]
+      },
+      {
+        "id": "reading",
+        "title": "Phần 2: Đọc hiểu (阅读)",
+        "durationSec": 480,
+        "maxScore": 100,
+        "instructions": "Đọc kỹ câu hỏi hoặc đoạn hội thoại ngắn và chọn đáp án phù hợp nhất.",
+        "questions": [
+          {
+            "id": "h1-r1",
+            "type": "mcq",
+            "prompt": "Chọn từ thích hợp điền vào chỗ trống:\n我___喝中国茶，妈妈喜欢喝咖啡。",
+            "options": ["喜欢 (xǐhuan)", "认识 (rènshi)", "看见 (kànjiàn)", "谢谢 (xièxie)"],
+            "answer": 0,
+            "explanation": "Vế sau có '妈妈喜欢喝咖啡', vế trước tương ứng là '我喜欢喝中国茶' (Tôi thích uống trà Trung Quốc)."
+          },
+          {
+            "id": "h1-r2",
+            "type": "mcq",
+            "prompt": "Chọn lượng từ phù hợp:\n桌子上有一___中文书。",
+            "options": ["个", "本", "口", "岁"],
+            "answer": 1,
+            "explanation": "Lượng từ chuẩn dùng cho sách (书) là 本 (běn): 一本中文书."
+          },
+          {
+            "id": "h1-r3",
+            "type": "mcq",
+            "prompt": "Chọn câu đáp phù hợp cho câu hỏi:\n— 请问，现在几点了？",
+            "options": ["现在是五月十号。", "今天星期天。", "现在是下午三点一刻。", "我今年二十岁。"],
+            "answer": 2,
+            "explanation": "Câu hỏi '现在几点了？' hỏi về giờ giấc hiện tại -> đáp án phù hợp là '现在是下午三点一刻' (3 giờ 15 phút chiều)."
+          },
+          {
+            "id": "h1-r4",
+            "type": "mcq",
+            "prompt": "Đọc câu sau và chọn nhận định ĐÚNG:\n“张明今年二十二岁，他是大学生，他非常喜欢打篮球和听音乐。”",
+            "options": ["Trương Minh là giáo viên đại học.", "Trương Minh năm nay 20 tuổi.", "Trương Minh thích chơi bóng rổ và nghe nhạc.", "Trương Minh không thích thể thao."],
+            "answer": 2,
+            "explanation": "'他非常喜欢打篮球和听音乐' nghĩa là cậu ấy rất thích chơi bóng rổ và nghe nhạc."
+          },
+          {
+            "id": "h1-r5",
+            "type": "mcq",
+            "prompt": "Chọn từ điền vào chỗ trống:\n昨天我买了一件新衣服，___颜色很漂亮。",
+            "options": ["什么", "多少", "它的", "怎么"],
+            "answer": 2,
+            "explanation": "'它的颜色很漂亮' (Màu sắc của nó rất đẹp), '它' thay thế cho '新衣服'."
+          },
+          {
+            "id": "h1-r6",
+            "type": "mcq",
+            "prompt": "Đọc đoạn hội thoại:\nA: 你会做中国菜吗？\nB: 我不会做，但是我很喜欢吃。\nNgười B có biết nấu món Trung Quốc không?",
+            "options": ["Rất giỏi nấu ăn", "Không biết nấu nhưng rất thích ăn", "Vừa biết nấu vừa thích ăn", "Không thích ăn món Trung Quốc"],
+            "answer": 1,
+            "explanation": "'我不会做，但是我很喜欢吃' nghĩa là Tôi không biết nấu, nhưng tôi rất thích ăn."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "exam-hsk2-01",
+    "level": "HSK2",
+    "title": "Đề Thi Mô Phỏng HSK 2 (Chuẩn HSK 3.0) — Đề số 01",
+    "description": "Gồm 2 phần thi chuẩn iBT: Nghe hiểu (100đ) và Đọc hiểu (100đ). Điểm đạt: 120/200.",
+    "passingScore": 120,
+    "maxScore": 200,
+    "sections": [
+      {
+        "id": "listening",
+        "title": "Phần 1: Nghe hiểu (听力)",
+        "durationSec": 600,
+        "maxScore": 100,
+        "maxReplays": 2,
+        "instructions": "Nghe hội thoại tiếng Trung (tối đa 2 lần/câu) và chọn phương án chính xác nhất.",
+        "questions": [
+          {
+            "id": "h2-l1",
+            "type": "mcq",
+            "audioText": "女：你为什么没去参加昨天的晚会？男：真不好意思，我昨天感冒了，头很疼，在家休息了一天。",
+            "prompt": "Tại sao người nam không đi dự tiệc tối qua?",
+            "options": ["Vì phải tăng ca ở công ty", "Vì bị cảm và đau đầu", "Vì trời mưa quá to", "Vì quên thời gian"],
+            "answer": 1,
+            "explanation": "'我昨天感冒了，头很疼，在家休息了一天' — Hôm qua tôi bị cảm, đau đầu nên ở nhà nghỉ cả ngày."
+          },
+          {
+            "id": "h2-l2",
+            "type": "mcq",
+            "audioText": "男：这双鞋看起来很不错，我可以试一下吗？女：当然可以，您穿多大码的？男：四十二码的。",
+            "prompt": "Họ có khả năng đang nói chuyện ở đâu?",
+            "options": ["Bệnh viện", "Nhà hàng", "Cửa hàng giày dép", "Thư viện"],
+            "answer": 2,
+            "explanation": "Nhắc đến '这双鞋' (đôi giày này), '试一下' (thử một chút), '四十二码' (cỡ 42) -> Cửa hàng giày dép."
+          },
+          {
+            "id": "h2-l3",
+            "type": "mcq",
+            "audioText": "女：下个月我们公司要去上海旅游，你准备好了吗？男：机票已经买好了，但是酒店还没订呢。",
+            "prompt": "Người nam vẫn CHƯA làm việc gì?",
+            "options": ["Mua vé máy bay", "Xin nghỉ phép", "Đặt khách sạn", "Mua vali"],
+            "answer": 2,
+            "explanation": "'机票已经买好了，但是酒店还没订呢' — Vé máy bay đã mua rồi, nhưng khách sạn vẫn chưa đặt."
+          },
+          {
+            "id": "h2-l4",
+            "type": "mcq",
+            "audioText": "男：你每天怎么去上班？女：以前坐地铁，现在我买了一辆自行车，每天骑车上班，既方便又能锻炼身体。",
+            "prompt": "Hiện tại người nữ đi làm bằng phương tiện gì?",
+            "options": ["Tàu điện ngầm", "Xe buýt", "Xe đạp", "Đi bộ"],
+            "answer": 2,
+            "explanation": "'现在我买了一辆自行车，每天骑车上班' — Bây giờ tôi đạp xe đi làm mỗi ngày."
+          },
+          {
+            "id": "h2-l5",
+            "type": "mcq",
+            "audioText": "女：今天的考试难不难？男：听力比较简单，但是阅读题太多了，我差点儿没做完。",
+            "prompt": "Người nam nhận xét thế nào về bài thi hôm nay?",
+            "options": ["Nghe rất khó, đọc rất dễ", "Nghe khá dễ, nhưng phần đọc quá nhiều câu", "Cả hai phần đều rất dễ", "Không làm xong phần nghe"],
+            "answer": 1,
+            "explanation": "'听力比较简单，但是阅读题太多了' — Nghe khá đơn giản nhưng câu hỏi đọc quá nhiều."
+          }
+        ]
+      },
+      {
+        "id": "reading",
+        "title": "Phần 2: Đọc hiểu (阅读)",
+        "durationSec": 600,
+        "maxScore": 100,
+        "instructions": "Hoàn thành các câu chọn từ và đọc hiểu đoạn văn chuẩn HSK 2 3.0.",
+        "questions": [
+          {
+            "id": "h2-r1",
+            "type": "mcq",
+            "prompt": "Điền từ đúng vào chỗ trống:\n___明天不下雨，我们就去爬山。",
+            "options": ["因为", "如果", "虽然", "但是"],
+            "answer": 1,
+            "explanation": "Cấu trúc giả thiết '如果……，就……' (Nếu ngày mai trời không mưa thì chúng ta đi leo núi)."
+          },
+          {
+            "id": "h2-r2",
+            "type": "mcq",
+            "prompt": "Điền từ thích hợp:\n他学中文已经两年了，现在说得___流利。",
+            "options": ["非常", "以前", "刚才", "一共"],
+            "answer": 0,
+            "explanation": "'说得非常流利' (nói vô cùng lưu loát) — 非常 là phó từ chỉ mức độ đứng trước tính từ."
+          },
+          {
+            "id": "h2-r3",
+            "type": "mcq",
+            "prompt": "Đọc đoạn văn:\n“小王比小李高一点儿，但是小李跑得比小王快得多。”\nCâu nào dưới đây ĐÚNG?",
+            "options": ["Tiểu Lý cao hơn Tiểu Vương.", "Tiểu Vương chạy nhanh hơn Tiểu Lý.", "Tiểu Lý chạy nhanh hơn Tiểu Vương nhiều.", "Hai người cao bằng nhau."],
+            "answer": 2,
+            "explanation": "'小李跑得比小王快得多' nghĩa là Tiểu Lý chạy nhanh hơn Tiểu Vương nhiều."
+          },
+          {
+            "id": "h2-r4",
+            "type": "mcq",
+            "prompt": "Chọn từ phù hợp điền vào chỗ trống:\n请大家___一下，图书馆里不要大声说话。",
+            "options": ["安静", "干净", "健康", "开心"],
+            "answer": 0,
+            "explanation": "'请大家安静一下' (Xin mọi người giữ yên lặng một chút) phù hợp với ngữ cảnh thư viện."
+          },
+          {
+            "id": "h2-r5",
+            "type": "mcq",
+            "prompt": "Đọc đoạn văn:\n“为了提高中文水平，林娜每天晚上除了复习生词以外，还坚持看半个小时中文新闻。”\nLâm Na làm gì mỗi tối để nâng cao tiếng Trung?",
+            "options": ["Chỉ xem phim hoạt hình", "Ôn từ mới và xem 30 phút tin tức tiếng Trung", "Đi học thêm ở trung tâm cả tối", "Nói chuyện điện thoại với bạn bè"],
+            "answer": 1,
+            "explanation": "'除了复习生词以外，还坚持看半个小时中文新闻' — Ngoài ôn từ mới còn kiên trì xem nửa tiếng tin tức tiếng Trung."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "exam-hsk3-01",
+    "level": "HSK3",
+    "title": "Đề Thi Mô Phỏng HSK 3 (Chuẩn HSK 3.0) — Đề số 01",
+    "description": "Đầy đủ 3 phần thi chuẩn HSK 3.0: Nghe hiểu (100đ), Đọc hiểu (100đ), Viết (100đ). Điểm đạt: 180/300.",
+    "passingScore": 180,
+    "maxScore": 300,
+    "sections": [
+      {
+        "id": "listening",
+        "title": "Phần 1: Nghe hiểu (听力)",
+        "durationSec": 660,
+        "maxScore": 100,
+        "maxReplays": 2,
+        "instructions": "Nghe các đoạn hội thoại và chọn đáp án đúng (giới hạn 2 lần nghe/câu).",
+        "questions": [
+          {
+            "id": "h3-l1",
+            "type": "mcq",
+            "audioText": "女：经理，这份报告我已经按照您的要求修改好了。男：辛苦了，你先发到我的邮箱里，我下午开完会再仔细看。",
+            "prompt": "Người nam sẽ xem bản báo cáo khi nào?",
+            "options": ["Ngay bây giờ", "Buổi trưa", "Sau khi họp xong buổi chiều", "Sáng ngày mai"],
+            "answer": 2,
+            "explanation": "'我下午开完会再仔细看' — Buổi chiều họp xong tôi sẽ xem kỹ."
+          },
+          {
+            "id": "h3-l2",
+            "type": "mcq",
+            "audioText": "男：你怎么又买了一把雨伞？家里不是已经有两把了吗？女：出门的时候天气预报说今天是晴天，谁知道突然下起大雨来了。",
+            "prompt": "Tại sao người nữ lại mua thêm ô?",
+            "options": ["Vì ô ở nhà bị hỏng", "Vì trời bất ngờ đổ mưa to khi không mang ô", "Vì thích màu sắc của chiếc ô mới", "Vì mua tặng bạn"],
+            "answer": 1,
+            "explanation": "Dự báo nói trời nắng nên không mang ô, ai ngờ bất ngờ mưa to ('突然下起大雨来了')."
+          },
+          {
+            "id": "h3-l3",
+            "type": "mcq",
+            "audioText": "女：你觉得这套房子怎么样？男：环境很安静，交通也方便，就是房租稍微贵了一点儿。",
+            "prompt": "Người nam chưa hài lòng điểm nào về căn nhà?",
+            "options": ["Giao thông bất tiện", "Môi trường ồn ào", "Tiền thuê hơi đắt", "Diện tích quá nhỏ"],
+            "answer": 2,
+            "explanation": "'就是房租稍微贵了一点儿' — Chỉ là tiền thuê nhà hơi đắt một chút."
+          },
+          {
+            "id": "h3-l4",
+            "type": "mcq",
+            "audioText": "男：周末的音乐会票很难买，你是怎么买到的？女：我提前一个月就在网上预订了，而且正好赶上打折活动。",
+            "prompt": "Người nữ đã mua vé hòa nhạc bằng cách nào?",
+            "options": ["Nhờ bạn tặng", "Mua ở cổng nhà hát", "Đặt trước trên mạng 1 tháng", "Mua lại với giá cao"],
+            "answer": 2,
+            "explanation": "'我提前一个月就在网上预订了' — Đặt trước trên mạng từ một tháng trước."
+          }
+        ]
+      },
+      {
+        "id": "reading",
+        "title": "Phần 2: Đọc hiểu (阅读)",
+        "durationSec": 720,
+        "maxScore": 100,
+        "instructions": "Đọc kỹ ngữ cảnh và chọn đáp án đúng cho các câu hỏi ngữ pháp & đọc hiểu HSK 3.",
+        "questions": [
+          {
+            "id": "h3-r1",
+            "type": "mcq",
+            "prompt": "Chọn từ thích hợp điền vào chỗ trống:\n请___桌上的文件整理好，明天早上开会要用。",
+            "options": ["被", "把", "让", "对"],
+            "answer": 1,
+            "explanation": "Câu chữ 把 (bǎ) diễn đạt tác động làm thay đổi trạng thái của tân ngữ: 请把桌上的文件整理好."
+          },
+          {
+            "id": "h3-r2",
+            "type": "mcq",
+            "prompt": "Chọn liên từ phù hợp:\n___遇到了很多困难，___他从来没有想过放弃。",
+            "options": ["因为……所以……", "虽然……但是……", "不但……而且……", "只要……就……"],
+            "answer": 1,
+            "explanation": "Hai vế mang nghĩa tương phản: Tuy gặp nhiều khó khăn, nhưng anh ấy chưa từng nghĩ đến việc bỏ cuộc."
+          },
+          {
+            "id": "h3-r3",
+            "type": "mcq",
+            "prompt": "Đọc đoạn văn:\n“很多年轻人喜欢熬夜玩手机，长期这样不仅会影响第二天的精神状态，还会对身体健康造成很大危害。医生建议大家每天尽量在十一点之前睡觉。”\nTheo đoạn văn, bác sĩ khuyên mọi người điều gì?",
+            "options": ["Nên dùng điện thoại trước khi ngủ", "Cố gắng ngủ trước 11 giờ mỗi tối", "Ngủ bù vào cuối tuần", "Uống cà phê để tỉnh táo"],
+            "answer": 1,
+            "explanation": "'医生建议大家每天尽量在十一点之前睡觉' — Bác sĩ khuyên mọi người cố gắng đi ngủ trước 11 giờ."
+          },
+          {
+            "id": "h3-r4",
+            "type": "mcq",
+            "prompt": "Chọn câu sử dụng ngữ pháp ĐÚNG:",
+            "options": ["我对中国文化很感兴趣。", "我中国文化很感兴趣。", "我把中国文化很感兴趣。", "我跟中国文化很感兴趣。"],
+            "answer": 0,
+            "explanation": "Cấu trúc cố định HSK 3: 对 + [danh từ] + 感兴趣 (có hứng thú với cái gì)."
+          }
+        ]
+      },
+      {
+        "id": "writing",
+        "title": "Phần 3: Viết (书写)",
+        "durationSec": 600,
+        "maxScore": 100,
+        "instructions": "Sắp xếp từ thành câu đúng trật tự ngữ pháp và viết câu ngắn dùng từ khóa yêu cầu.",
+        "questions": [
+          {
+            "id": "h3-w1",
+            "type": "reorder",
+            "prompt": "Sắp xếp các cụm từ sau thành câu tiếng Trung hoàn chỉnh:",
+            "tokens": ["已经", "他", "把", "作业", "写完了"],
+            "expected": "他已经把作业写完了",
+            "explanation": "Trật tự chuẩn câu chữ 把: Chủ ngữ (他) + Phó từ (已经) + 把 + Tân ngữ (作业) + Động từ + Bổ ngữ (写完了)."
+          },
+          {
+            "id": "h3-w2",
+            "type": "reorder",
+            "prompt": "Sắp xếp các cụm từ sau thành câu tiếng Trung hoàn chỉnh:",
+            "tokens": ["对", "这个", "非常", "安排", "大家", "满意"],
+            "expected": "大家对这个安排非常满意",
+            "explanation": "Cấu trúc 'A 对 B 非常满意' -> 大家对这个安排非常满意 (Mọi người rất hài lòng với sự sắp xếp này)."
+          },
+          {
+            "id": "h3-w3",
+            "type": "compose",
+            "prompt": "Dùng từ khóa “按照” (theo như) viết một câu tiếng Trung hoàn chỉnh (tối thiểu 6 chữ Hán):",
+            "keywords": ["按照"],
+            "minChars": 6,
+            "sampleAnswer": "我们应该按照计划完成这项工作。",
+            "explanation": "Gợi ý chuẩn: '我们应该按照计划完成这项工作。' (Chúng ta nên hoàn thành công việc này theo kế hoạch)."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "exam-hsk4-01",
+    "level": "HSK4",
+    "title": "Đề Thi Mô Phỏng HSK 4 (Chuẩn HSK 3.0) — Đề số 01",
+    "description": "Đầy đủ 3 kỹ năng Nghe (1 lần nghe chuẩn thi thật) – Đọc – Viết. Thang điểm 300, đạt từ 180.",
+    "passingScore": 180,
+    "maxScore": 300,
+    "sections": [
+      {
+        "id": "listening",
+        "title": "Phần 1: Nghe hiểu (听力)",
+        "durationSec": 720,
+        "maxScore": 100,
+        "maxReplays": 1,
+        "instructions": "Chuẩn HSK 4 thi thật: mỗi đoạn ghi âm chỉ được phát tối đa 1 lần. Hãy tập trung cao độ!",
+        "questions": [
+          {
+            "id": "h4-l1",
+            "type": "mcq",
+            "audioText": "科学研究表明，每天坚持半小时中等强度的运动，不仅能够减轻工作带来的压力，还能显著提高睡眠质量。",
+            "prompt": "Theo đoạn nghe, vận động 30 phút mỗi ngày có lợi ích nào?",
+            "options": ["Giảm áp lực công việc và cải thiện chất lượng giấc ngủ", "Giúp tăng chiều cao nhanh chóng", "Thay thế hoàn toàn việc ngủ trưa", "Làm tăng cảm giác đói vào ban đêm"],
+            "answer": 0,
+            "explanation": "'不仅能够减轻工作带来的压力，还能显著提高睡眠质量' — Giảm áp lực công việc và nâng cao rõ rệt chất lượng giấc ngủ."
+          },
+          {
+            "id": "h4-l2",
+            "type": "mcq",
+            "audioText": "女：下周的国际交流会，演讲稿你准备得怎么样了？男：初稿已经写好了，不过有几个专业数据还需要再次核对一下，以免出错。",
+            "prompt": "Người nam sắp làm gì tiếp theo với bài diễn văn?",
+            "options": ["Bắt đầu viết bản thảo đầu tiên", "Kiểm tra lại một số số liệu chuyên môn", "Nhờ đồng nghiệp thuyết trình thay", "Hủy tham gia hội thảo"],
+            "answer": 1,
+            "explanation": "'有几个专业数据还需要再次核对一下，以免出错' — Cần đối chiếu lại vài số liệu chuyên môn để tránh sai sót."
+          },
+          {
+            "id": "h4-l3",
+            "type": "mcq",
+            "audioText": "随着移动支付的普及，现在出门几乎不用带现金了，无论是坐公交车还是买菜，拿手机扫一扫就能完成付款。",
+            "prompt": "Đoạn nghe chủ yếu nói về sự thay đổi nào?",
+            "options": ["Sự phổ biến và tiện lợi của thanh toán di động", "Giá rau ở chợ ngày càng đắt", "Mọi người ít đi xe buýt hơn trước", "Điện thoại thông minh ngày càng nặng"],
+            "answer": 0,
+            "explanation": "Câu chủ đề ngay đầu: '随着移动支付的普及，现在出门几乎不用带现金了'."
+          }
+        ]
+      },
+      {
+        "id": "reading",
+        "title": "Phần 2: Đọc hiểu (阅读)",
+        "durationSec": 840,
+        "maxScore": 100,
+        "instructions": "Chọn từ chính xác theo ngữ cảnh học thuật/công sở và trả lời câu hỏi đọc hiểu HSK 4.",
+        "questions": [
+          {
+            "id": "h4-r1",
+            "type": "mcq",
+            "prompt": "Điền từ đúng:\n无论遇到多大的困难，我们都不能___自己的梦想。",
+            "options": ["放弃 (fàngqì)", "拒绝 (jùjué)", "推迟 (tuīchí)", "节省 (jiéshěng)"],
+            "answer": 0,
+            "explanation": "'放弃梦想' (từ bỏ ước mơ) là kết hợp từ chuẩn xác nhất."
+          },
+          {
+            "id": "h4-r2",
+            "type": "mcq",
+            "prompt": "Điền liên từ chuẩn:\n___提前做好充分的准备，才能在关键时刻发挥出最好的水平。",
+            "options": ["只要", "只有", "既然", "尽管"],
+            "answer": 1,
+            "explanation": "Cấu trúc điều kiện duy nhất: '只有……，才……' (Chỉ có chuẩn bị đầy đủ trước mới có thể phát huy tốt nhất)."
+          },
+          {
+            "id": "h4-r3",
+            "type": "mcq",
+            "prompt": "Đọc đoạn văn:\n“在团队合作中，沟通往往比个人能力更重要。即使每个成员都非常优秀，如果缺乏有效沟通，项目也很难顺利推进。因此，学会倾听他人的意见是每个职场人的必修课。”\nTác giả nhấn mạnh điều gì nhất trong làm việc nhóm?",
+            "options": ["Năng lực cá nhân quyết định tất cả", "Giao tiếp hiệu quả và biết lắng nghe người khác", "Không cần họp nhóm thường xuyên", "Chỉ cần trưởng nhóm giỏi là đủ"],
+            "answer": 1,
+            "explanation": "'沟通往往比个人能力更重要... 学会倾听他人的意见是每个职场人的必修课'."
+          }
+        ]
+      },
+      {
+        "id": "writing",
+        "title": "Phần 3: Viết (书写)",
+        "durationSec": 720,
+        "maxScore": 100,
+        "instructions": "Sắp xếp câu nâng cao và viết câu hoàn chỉnh sử dụng từ khóa HSK 4.",
+        "questions": [
+          {
+            "id": "h4-w1",
+            "type": "reorder",
+            "prompt": "Sắp xếp các cụm từ sau thành câu hoàn chỉnh:",
+            "tokens": ["被", "那篇", "文章", "深深地", "观众们", "感动了"],
+            "expected": "观众们被那篇文章深深地感动了",
+            "explanation": "Câu bị động chữ 被: Chủ ngữ (观众们) + 被 + Tác nhân (那篇文章) + Trạng ngữ (深深地) + Động từ (感动了)."
+          },
+          {
+            "id": "h4-w2",
+            "type": "compose",
+            "prompt": "Dùng 2 từ khóa “积累” (tích lũy) và “经验” (kinh nghiệm) để viết một câu hoàn chỉnh (tối thiểu 10 chữ Hán):",
+            "keywords": ["积累", "经验"],
+            "minChars": 10,
+            "sampleAnswer": "通过这次实习，我积累了许多宝贵的工作经验。",
+            "explanation": "Câu mẫu chuẩn HSK 4: '通过这次实习，我积累了许多宝贵的工作经验。'"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "exam-hsk5-01",
+    "level": "HSK5",
+    "title": "Đề Thi Mô Phỏng HSK 5 (Chuẩn HSK 3.0) — Đề số 01",
+    "description": "Mô phỏng đề thi cao cấp HSK 5: Nghe (1 lần), Đọc hiểu học thuật và Viết đoạn ngắn. Điểm đạt: 180/300.",
+    "passingScore": 180,
+    "maxScore": 300,
+    "sections": [
+      {
+        "id": "listening",
+        "title": "Phần 1: Nghe hiểu (听力)",
+        "durationSec": 780,
+        "maxScore": 100,
+        "maxReplays": 1,
+        "instructions": "Mỗi đoạn ghi âm chỉ phát 1 lần duy nhất như thi HSK 5 iBT thực tế.",
+        "questions": [
+          {
+            "id": "h5-l1",
+            "type": "mcq",
+            "audioText": "很多人在面对突发危机时容易陷入悲观情绪，然而真正决定结果的是我们能否保持冷静，客观分析局势并迅速采取应对措施。",
+            "prompt": "Theo đoạn nghe, yếu tố nào thực sự quyết định kết quả khi gặp khủng hoảng?",
+            "options": ["Sự may mắn nhất thời", "Giữ bình tĩnh, phân tích khách quan và hành động kịp thời", "Tránh né vấn đề chờ thời gian trôi qua", "Làm theo cảm tính của số đông"],
+            "answer": 1,
+            "explanation": "'能否保持冷静，客观分析局势并迅速采取应对措施' — Giữ bình tĩnh, phân tích khách quan và nhanh chóng ứng phó."
+          },
+          {
+            "id": "h5-l2",
+            "type": "mcq",
+            "audioText": "这部纪录片耗时三年拍摄，镜头对准了偏远山区的传统手工艺人，不仅展示了精湛的技艺，更引发了公众对非物质文化遗产保护的深刻思考。",
+            "prompt": "Bộ phim tài liệu này mang lại giá trị gì nổi bật?",
+            "options": ["Quảng bá du lịch biển", "Thể hiện tay nghề tinh xảo và khơi gợi suy ngẫm về bảo tồn di sản văn hóa phi vật thể", "Giới thiệu công nghệ sản xuất hàng loạt", "Kể về cuộc sống đô thị hiện đại"],
+            "answer": 1,
+            "explanation": "'引发了公众对非物质文化遗产保护的深刻思考' — Khơi gợi suy nghĩ sâu sắc về bảo tồn di sản văn hóa phi vật thể."
+          }
+        ]
+      },
+      {
+        "id": "reading",
+        "title": "Phần 2: Đọc hiểu (阅读)",
+        "durationSec": 900,
+        "maxScore": 100,
+        "instructions": "Đọc hiểu văn bản chuyên sâu chuẩn HSK 5 3.0.",
+        "questions": [
+          {
+            "id": "h5-r1",
+            "type": "mcq",
+            "prompt": "Chọn từ chính xác điền vào chỗ trống:\n在做出重大投资决定之前，必须___地评估潜在的市场风险。",
+            "options": ["谨慎 (jǐnshèn)", "匆忙 (cōngmáng)", "委屈 (wěiqu)", "轻视 (qīngshì)"],
+            "answer": 0,
+            "explanation": "'谨慎地评估风险' (đánh giá rủi ro một cách thận trọng) là cách diễn đạt chuẩn văn viết HSK 5."
+          },
+          {
+            "id": "h5-r2",
+            "type": "mcq",
+            "prompt": "Đọc đoạn văn:\n“人工智能的发展正在重塑各行各业的工作方式。与其担心被技术取代，不如主动学习新技能，将AI作为提升效率的工具，把精力集中在需要创造力和同理心的工作上。”\nThái độ tác giả khuyến khích đối với AI là gì?",
+            "options": ["Phản đối việc ứng dụng AI", "Chủ động học kỹ năng mới và dùng AI làm công cụ nâng cao hiệu suất", "Chờ đợi công nghệ tự thay đổi", "Chỉ làm những việc lặp đi lặp lại"],
+            "answer": 1,
+            "explanation": "'与其担心被技术取代，不如主动学习新技能，将AI作为提升效率的工具'."
+          }
+        ]
+      },
+      {
+        "id": "writing",
+        "title": "Phần 3: Viết (书写)",
+        "durationSec": 900,
+        "maxScore": 100,
+        "instructions": "Sắp xếp câu phức và viết đoạn văn ngắn có sử dụng đủ từ khóa HSK 5.",
+        "questions": [
+          {
+            "id": "h5-w1",
+            "type": "reorder",
+            "prompt": "Sắp xếp các cụm từ sau thành câu hoàn chỉnh:",
+            "tokens": ["从失败中", "宝贵的", "他", "吸取了", "教训"],
+            "expected": "他从失败中吸取了宝贵的教训",
+            "explanation": "'他从失败中吸取了宝贵的教训' (Anh ấy đã rút ra bài học quý giá từ thất bại)."
+          },
+          {
+            "id": "h5-w2",
+            "type": "compose",
+            "prompt": "Dùng các từ khóa “表达” (biểu đạt) và “有效” (hiệu quả) viết 1–2 câu tiếng Trung chuẩn HSK 5 (tối thiểu 15 chữ Hán):",
+            "keywords": ["表达", "有效"],
+            "minChars": 15,
+            "sampleAnswer": "清晰地表达自己的观点是实现有效沟通的重要前提。",
+            "explanation": "Câu mẫu chuẩn: '清晰地表达自己的观点是实现有效沟通的重要前提。'"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "exam-hsk6-01",
+    "level": "HSK6",
+    "title": "Đề Thi Mô Phỏng HSK 6 (Chuẩn HSK 3.0) — Đề số 01",
+    "description": "Trình độ cao cấp HSK 6: Nghe 1 lần, Đọc phân tích câu bệnh & luận điểm, Viết nghị luận ngắn.",
+    "passingScore": 180,
+    "maxScore": 300,
+    "sections": [
+      {
+        "id": "listening",
+        "title": "Phần 1: Nghe hiểu (听力)",
+        "durationSec": 840,
+        "maxScore": 100,
+        "maxReplays": 1,
+        "instructions": "Nghe 1 lần duy nhất đoạn diễn thuyết ngắn và chọn kết luận chính xác.",
+        "questions": [
+          {
+            "id": "h6-l1",
+            "type": "mcq",
+            "audioText": "任何一项伟大的技术创新都不是一蹴而就的，它既需要科研人员长期的沉淀与坚守，也离不开开放包容的学术氛围与持续的资源投入。",
+            "prompt": "Luận điểm cốt lõi của đoạn diễn thuyết là gì?",
+            "options": ["Đổi mới công nghệ có thể đạt được trong thời gian ngắn", "Đổi mới công nghệ đòi hỏi sự tích lũy lâu dài, môi trường học thuật cởi mở và đầu tư bền bỉ", "Chỉ cần đầu tư tài chính là đủ thành công", "Nghiên cứu khoa học không cần sự kiên trì"],
+            "answer": 1,
+            "explanation": "'长期的沉淀与坚守' (sự lắng đọng & kiên trì dài lâu) + '开放包容的学术氛围' + '持续的资源投入'."
+          },
+          {
+            "id": "h6-l2",
+            "type": "mcq",
+            "audioText": "在信息爆炸的时代，人们每天接触海量资讯，若缺乏独立思考与辨别能力，很容易被片面的观点左右，甚至陷入盲从。",
+            "prompt": "Tác giả cảnh báo nguy cơ gì trong thời đại bùng nổ thông tin?",
+            "options": ["Không có đủ nguồn tin để đọc", "Thiếu tư duy độc lập sẽ dễ bị dẫn dắt bởi quan điểm phiến diện", "Tốc độ internet quá chậm", "Mọi người không còn thích đọc tin tức"],
+            "answer": 1,
+            "explanation": "'若缺乏独立思考与辨别能力，很容易被片面的观点左右，甚至陷入盲从'."
+          }
+        ]
+      },
+      {
+        "id": "reading",
+        "title": "Phần 2: Đọc hiểu (阅读)",
+        "durationSec": 900,
+        "maxScore": 100,
+        "instructions": "Nhận diện câu sai ngữ pháp (语病) và chọn thành ngữ/từ vựng cao cấp HSK 6.",
+        "questions": [
+          {
+            "id": "h6-r1",
+            "type": "mcq",
+            "prompt": "Chọn thành ngữ thích hợp điền vào chỗ trống:\n学习任何一门技艺都贵在持之以恒，如果遇到一点挫折就___，终究难以有所成就。",
+            "options": ["半途而废 (bàntú'érfèi)", "博大精深 (bódà jīngshēn)", "不屑一顾 (bùxiè yígù)", "一举两得 (yìjǔ liǎngdé)"],
+            "answer": 0,
+            "explanation": "'半途而废' nghĩa là bỏ dở giữa chừng, đối lập trực tiếp với '持之以恒' (kiên trì bền bỉ)."
+          },
+          {
+            "id": "h6-r2",
+            "type": "mcq",
+            "prompt": "Chọn câu KHÔNG có lỗi ngữ pháp (không phải 语病):",
+            "options": [
+              "通过这次国际会议，使大家加深了彼此之间的了解。",
+              "这次国际会议加深了大家彼此之间的了解。",
+              "他的演讲水平和丰富的知识赢得了阵阵掌声。",
+              "切忌不要在图书馆内大声喧哗。"
+            ],
+            "answer": 1,
+            "explanation": "A thiếu chủ ngữ do dùng thừa '通过...使...'; C lỗi phối hợp '知识' không thể '赢得掌声'; D phủ định kép sai nghĩa '切忌不要'. Chỉ B chuẩn xác hoàn toàn."
+          }
+        ]
+      },
+      {
+        "id": "writing",
+        "title": "Phần 3: Viết (书写)",
+        "durationSec": 900,
+        "maxScore": 100,
+        "instructions": "Viết đoạn ngắn trình độ HSK 6 tích hợp đầy đủ từ khóa cho trước.",
+        "questions": [
+          {
+            "id": "h6-w1",
+            "type": "compose",
+            "prompt": "Dùng 2 từ khóa “沉淀” (lắng đọng/tích lũy) và “创新” (đổi mới sáng tạo) viết 1–2 câu nghị luận hoàn chỉnh (tối thiểu 20 chữ Hán):",
+            "keywords": ["沉淀", "创新"],
+            "minChars": 20,
+            "sampleAnswer": "真正有价值的创新往往源于深厚的积累与时间的沉淀，而非盲目追逐短期热点。",
+            "explanation": "Câu mẫu HSK 6: '真正有价值的创新往往源于深厚的积累与时间的沉淀，而非盲目追逐短期热点。'"
+          }
+        ]
+      }
+    ]
+  }
+]
